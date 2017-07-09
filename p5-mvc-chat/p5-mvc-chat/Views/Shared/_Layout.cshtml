@@ -7,17 +7,16 @@
   <link rel="stylesheet" href="~/Content/site.css" />
   <link rel="stylesheet" href="~/Content/bootstrap.css" />
   <link rel="stylesheet" href="~/Content/bootstrap-theme.css" />
+  <environment names="Development">
+    <script src="~/Scripts/jquery-1.9.1.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/site.js" ></script>
+  </environment>
 </head>
 <body style="background-color: #f50000">
 <div class="container">
   @RenderBody()
 </div>
-
-<environment names="Development">
-  <script src="~/Scripts/jquery-1.9.1.js"></script>
-  <script src="~/Scripts/bootstrap.js"></script>
-  <script src="~/Scripts/site.js" ></script>
-</environment>
 
 @RenderSection("scripts", required: false)
 </body>
