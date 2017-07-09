@@ -20,5 +20,8 @@ body {
 input,
 select,
 textarea {
-    max-width: 280px;
+}
+
+.bg-red {
+    background-color: #f50000;
 }

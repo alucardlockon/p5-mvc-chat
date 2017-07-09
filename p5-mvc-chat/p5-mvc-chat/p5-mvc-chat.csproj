@@ -107,6 +107,16 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\img\akechi.jpg" />
+    <Content Include="Content\img\fox.jpg" />
+    <Content Include="Content\img\joker.jpg" />
+    <Content Include="Content\img\mona.jpg" />
+    <Content Include="Content\img\navi.jpg" />
+    <Content Include="Content\img\noir.jpg" />
+    <Content Include="Content\img\panther.jpg" />
+    <Content Include="Content\img\queen.jpg" />
+    <Content Include="Content\img\skull.jpg" />
+    <Content Include="Content\img\velvetroom.jpg" />
     <Content Include="Content\site.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
@@ -123,8 +133,7 @@
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="Scripts\site.js" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Scripts\vue.js" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -133,7 +142,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Content" />
     <Folder Include="Models" />
   </ItemGroup>
   <ItemGroup>
