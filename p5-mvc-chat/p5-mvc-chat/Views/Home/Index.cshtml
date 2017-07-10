@@ -159,18 +159,24 @@
                 window.$.post('Home/AddCommet',item,
                     function() {
                     });
+            },
+            refreshMsg: function() {
+                var self = this;
+                window.$.post('Home/GetList',{},
+                    function(result) {
+                        var list = JSON.parse(result);
+                        self.items = [];
+                        for (var i=0;i<list.length;i++) {
+                            list[i].Createtime = new Date(parseInt(list[i].Createtime.replace('/Date(','').replace(')/','')));
+                            self.items.push(list[i]);
+                        }
+                    });
             }
         },
         mounted:function() {
             var self = this;
-            window.$.post('Home/GetList',{},
-                function(result) {
-                    var list = JSON.parse(result);
-                    for (var i=0;i<list.length;i++) {
-                        list[i].Createtime = new Date(parseInt(list[i].Createtime.replace('/Date(','').replace(')/','')));
-                        self.items.push(list[i]);
-                    }
-                });
+            self.refreshMsg();
+            setInterval(function(){self.refreshMsg()},1000);
         }
     });
 </script>
