@@ -95,9 +95,13 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\DbContext\AdminContext.cs" />
     <Compile Include="Controllers\DbContext\ChatDbContext.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs" />
+    <Compile Include="Models\AdminRight.cs" />
+    <Compile Include="Models\AdminUser.cs" />
     <Compile Include="Models\Chat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -138,6 +142,7 @@
     <Content Include="Scripts\site.js" />
     <Content Include="Scripts\vue.js" />
     <Content Include="Sql\init.sql" />
+    <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
