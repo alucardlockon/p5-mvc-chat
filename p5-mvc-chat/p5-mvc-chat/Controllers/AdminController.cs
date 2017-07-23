@@ -12,30 +12,35 @@ namespace p5_mvc_chat.Controllers
 {
     public class AdminController : Controller
     {
-        DbContext.AdminContext _admin = new DbContext.AdminContext();
-        
+        ChatDbContext.ChatDbContext _chatDb = new ChatDbContext.ChatDbContext();
+
         // get
         [HttpGet]
         public ActionResult Index()
         {
-            return View(_admin.AdminUsers.ToList());
+            return View(_chatDb.AdminUsers.ToList());
         }
 
         [HttpPost]
         public string GetList()
         {
-            string json = System.Web.Helpers.Json.Encode(_admin.AdminUsers.ToList());
+            string json = System.Web.Helpers.Json.Encode(_chatDb.AdminUsers.ToList());
             return json;
         }
         
-        [HttpPost]
-        public string AddCommet(AdminUser user)
+        [HttpGet]
+        public ActionResult Add()
         {
-            if (!ModelState.IsValid) return "error";
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Add(AdminUser user)
+        {
+            if (!ModelState.IsValid) return View();
             user.Ip = Request.UserHostAddress;
-            _admin.AdminUsers.Add(user);
-            _admin.SaveChanges();
-            return "success";
+            _chatDb.AdminUsers.Add(user);
+            _chatDb.SaveChanges();
+            return View(user);
         }
     }
 }

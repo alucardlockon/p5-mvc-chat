@@ -1,7 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace p5_mvc_chat.Models
 {
+    [Table("p5_admin_right")]
     public class AdminRight
     {
         [Key]
@@ -14,5 +17,7 @@ namespace p5_mvc_chat.Models
 
         [Display(Name = "启用")]
         public bool Enabled { get; set; }
+        [Display(Name = "创建时间")]
+        public DateTime Create { get; set; }
     }
 }

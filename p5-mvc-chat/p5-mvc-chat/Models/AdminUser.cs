@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace p5_mvc_chat.Models
 {
+    [Table("p5_admin_user")]
     public class AdminUser
     {
         [Key]
