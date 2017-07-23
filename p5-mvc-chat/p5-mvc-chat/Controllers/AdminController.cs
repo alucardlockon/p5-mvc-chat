@@ -18,7 +18,7 @@ namespace p5_mvc_chat.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            return View(_chatDb.AdminUsers.ToList());
+            return View(_chatDb.AdminUsers.Include("AdminRights").ToList());
         }
 
         [HttpPost]

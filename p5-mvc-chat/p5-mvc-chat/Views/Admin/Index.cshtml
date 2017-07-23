@@ -6,7 +6,7 @@
 <ul>
     @foreach (AdminUser item in Model)
     {
-        <li>@Html.DisplayFor(x => item.UserName)</li>
+        <li>@Html.DisplayFor(x => item.UserName),@(item.AdminRights.Count > 0 ? item.AdminRights[0].Name : "")</li>
     }
 </ul>
 
