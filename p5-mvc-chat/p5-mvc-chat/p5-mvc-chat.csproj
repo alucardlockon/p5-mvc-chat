@@ -114,6 +114,7 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\DbContext\ChatDbContext.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Global.asax.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AdminRight.cs" />
@@ -160,6 +161,7 @@
     <Content Include="Sql\init.sql" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Menu\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
